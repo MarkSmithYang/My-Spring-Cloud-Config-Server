@@ -1,0 +1,34 @@
+#设置端口号
+server:
+  port: 9595
+
+#spring 相关配置
+spring:
+  application:
+    #微服务名
+    name: config-server
+  profiles:
+    #服务的环境
+    active: dev
+  #配置中心(云配置)相关配置
+  cloud:
+    config:
+      server:
+        ##git中心配置（这里我将配置文件存储在码云(osChina--(开源中国))上,也可以使用GitHub）
+        git:
+          #配置文件所在的服务地址
+          uri: https://gitee.com/MarkSmithYang/config-server.git
+          #配置文件前缀 （这里配置的name+profile为我们要读的配置文件 即 config-server-dev）
+          search-paths: config-server
+
+          #码云的用户名和密码
+          username: itbiaoyang@163.com
+          password:
+
+#eureka的相关配置
+eureka:
+  client:
+    service-url:
+      #配置服务中心(可配置多个,用逗号隔开)
+      defaultZone: http://localhost:8080/eureka-server/eureka/
+
