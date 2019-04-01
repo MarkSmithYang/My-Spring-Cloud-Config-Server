@@ -20,7 +20,6 @@ spring:
           uri: https://gitee.com/MarkSmithYang/config-server.git
           #配置文件前缀 （这里配置的name+profile为我们要读的配置文件 即 config-server-dev）
           search-paths: config-server
-
           #码云的用户名和密码
           username: itbiaoyang@163.com
           password:
