@@ -20,6 +20,16 @@
     </properties>
 
     <dependencies>
+        <!--使用rabbitMQ的消息总线-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
+        <!--使用配置中心/消息总线涉及到需要刷新配置,需要引入这个监控依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
         <!--配置中心(服务)依赖-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
