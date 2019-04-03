@@ -20,8 +20,8 @@ spring:
           uri: https://github.com/MarkSmithYang/Spring-Cloud-Config.git
           #配置文件前缀 （这里配置的name+profile为我们要读的配置文件 即 config-server-dev）
           search-paths: config-server
-          #码云的用户名和密码
-          username: MarkSmithYang
+          #GitHub的用户名和密码--填写过一次以后,居然不用些用户名和密码也可以(应该是用户名和密码信息被存储了)
+          username:
           password:
   #中间件rabbitmq的配置
   rabbitmq:
@@ -48,4 +48,4 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: ["info","health","bus-refresh"]
