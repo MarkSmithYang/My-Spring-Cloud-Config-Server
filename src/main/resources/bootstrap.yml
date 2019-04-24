@@ -44,6 +44,7 @@ logging:
 #如果需要手动去刷新配置,需要引入actuator依赖,还需要暴露refresh端点,并且post访问/actuator/refresh
 #如果是用的消息总线,把配置中心服务引入bus依赖,并且使用webhooks(钩子)更新config-server的配置,刷新路径/actuator/bus-refresh,
 #和客户端刷新的方式一样,只是使用消息总线的时候,只需在配置服务端做服务的刷新即可,而不用每个客户端去刷新
+#而GitHub或者Gitee(码云)使用钩子(webhooks)似乎是需要域名的那种,实测ip的方式不能成功
 management:
   endpoints:
     web:
